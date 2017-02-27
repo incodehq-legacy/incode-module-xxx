@@ -134,7 +134,7 @@ public class XxxObject_IntegTest extends XxxModuleIntegTestAbstract {
         @Test
         public void should_be_populated() throws Exception {
             // when
-            final Long id = mixin(Persistable_datanucleusIdLong.class, domainObject).$$();
+            final Long id = mixin(Persistable_datanucleusIdLong.class, domainObject).exec();
 
             // then
             assertThat(id).isGreaterThanOrEqualTo(0);
@@ -146,7 +146,7 @@ public class XxxObject_IntegTest extends XxxModuleIntegTestAbstract {
         @Test
         public void should_be_populated() throws Exception {
             // when
-            final Timestamp timestamp = mixin(Persistable_datanucleusVersionTimestamp.class, domainObject).$$();
+            final Timestamp timestamp = mixin(Persistable_datanucleusVersionTimestamp.class, domainObject).exec();
             // then
             assertThat(timestamp).isNotNull();
         }
