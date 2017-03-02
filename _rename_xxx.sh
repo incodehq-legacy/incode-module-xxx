@@ -53,7 +53,7 @@ echo
 echo "editing files..."
 echo
 
-for a in `find . -type f | egrep "(\.java|\.xml|\.properties|\.ini)" | grep -v target | grep -v "\.git" | grep -v _rename_xxx.sh`
+for a in `find . -type f | egrep "(\.java|\.xml|\.properties|\.ini|\.sh|\.adoc)$" | grep -v target | grep -v "\.git" | grep -v _rename_xxx.sh`
 do 
     echo $a
     cat $a | sed "s/${FROM_UPPER}/${TO_UPPER}/g" | sed "s/${FROM_LOWER}/${TO_LOWER}/g" > /tmp/1.$$
