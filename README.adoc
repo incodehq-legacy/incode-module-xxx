@@ -1,3 +1,4 @@
+[[incode-module-xxx]]
 = incode-module-xxx
 :_imagesdir: ./
 :toc:
@@ -7,6 +8,7 @@ image:https://travis-ci.org/incodehq/incode-module-xxx.png?branch=master[Build S
 This module, intended for use with link:http://isis.apache.org[Apache Isis], provides ...
 
 
+[[_incode-module-xxx_screenshots]]
 == Screenshots
 
 [WARNING]
@@ -15,6 +17,7 @@ TODO: to document
 ====
 
 
+[[_incode-module-xxx_domain-model]]
 == Domain Model
 
 [WARNING]
@@ -22,6 +25,8 @@ TODO: to document
 TODO: to document
 ====
 
+
+[[_incode-module-xxx_how-to-run-the-demo-app]]
 == How to run the Demo App
 
 
@@ -51,11 +56,10 @@ Then log on using user: `sven`, password: `pass`
 
 
 
+[[_incode-module-xxx_how-to-configure-use]]
 == How to configure/use
 
 You can either use this module "out-of-the-box", or you can fork this repo and extend to your own requirements. 
-
-=== "Out-of-the-box"
 
 To use "out-of-the-box":
 
@@ -83,65 +87,25 @@ public List<Class<?>> getModules() {
 }
 ----
 
-
-
-Notes:
-
-* Check for later releases by searching http://search.maven.org/#search|ga|1|incode-module-xxx-dom[Maven Central Repo].
-
-
-==== "Out-of-the-box" (-SNAPSHOT)
-
-If you want to use the current `-SNAPSHOT`, then the steps are the same as above, except:
-
-* when updating the classpath, specify the appropriate -SNAPSHOT version:
-
-[source,xml]
-----
-<version>1.14.0-SNAPSHOT</version>
-----
-
-* add the repository definition to pick up the most recent snapshot (we use the Cloudbees continuous integration service).  
-We suggest defining the repository in a `<profile>`:
-
-[source,xml]
-----
-<profile>
-    <id>cloudbees-snapshots</id>
-    <activation>
-        <activeByDefault>true</activeByDefault>
-    </activation>
-    <repositories>
-        <repository>
-            <id>snapshots-repo</id>
-            <url>http://repository-estatio.forge.cloudbees.com/snapshot/</url>
-            <releases>
-                <enabled>false>/enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-</profile>
-----
+Check for later releases by searching http://search.maven.org/#search|ga|1|incode-module-xxx-dom[Maven Central Repo].
 
 
 
-
-
-
+[[_incode-module-xxx_known-issues]]
 == Known issues
 
 (none)
 
 
+[[_incode-module-xxx_change-log]]
 == Change Log
 
 
 * `1.14.0` - released against Isis 1.14.0
 
 
+
+[[_incode-module-xxx_forking-the-repo]]
 == Forking the repo
 
 If instead you want to extend this module's functionality, then we recommend that you fork this repo.  The repo is
@@ -157,14 +121,15 @@ structured as follows:
 Only the `module-dom` project is released to Maven Central Repo.  The versions of the other modules are purposely left at
 `0.0.1-SNAPSHOT` because they are not intended to be released.
 
-////////////////////////////////////////////////////
 
 Note that the module uses link:https://projectlombok.org/[Project Lombok].  To compile the code within your IDE you will
 therefore require the appropriate Lombok plugin.  See the link:https://projectlombok.org/download.html[Lombok download page] for more information.
 
 
+[[_incode-module-xxx_legal-stuff]]
 == Legal Stuff
 
+[[_incode-module-xxx_legal-stuff_license]]
 === License
 
 [source]
@@ -185,21 +150,26 @@ specific language governing permissions and limitations
 under the License.
 ----
 
-=== Dependencies
+[[_incode-module-xxx_legal-stuff_dependencies]]
+=== Non-Apache Licensed Dependencies
 
 None.
 
 
+[[_incode-module-xxx_legal-stuff_icons]]
 === Icons
 
 The icons are provided by https://icons8.com/[Icons8].
 
 
+[[_incode-module-xxx_maven-deploy-notes]]
 ==  Maven deploy notes
 
 Only the `dom` module is deployed, and is done so using Sonatype's OSS support (see
 http://central.sonatype.org/pages/apache-maven.html[user guide]).
 
+
+[[_incode-module-xxx_maven-deploy-notes_snapshots]]
 === Release to Sonatype's Snapshot Repo
 
 To deploy a snapshot, use:
@@ -216,6 +186,7 @@ https://oss.sonatype.org/content/repositories/snapshots[Snapshot Repo].
 
 
 
+[[_incode-module-xxx_maven-deploy-notes_interim-build]]
 === Release an Interim Build
 
 If you have commit access to this project (or a fork of your own) then you can create interim releases using the `interim-release.sh` script.
@@ -241,6 +212,7 @@ where
 
 
 
+[[_incode-module-xxx_maven-deploy-notes_release-to-maven-central]]
 === Release to Maven Central
 
 The `release.sh` script automates the release process. It performs the following:
